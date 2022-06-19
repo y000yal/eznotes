@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" href="src/assets/css/popup.css" />
+  <link rel="stylesheet" href="src/assets/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="src/assets/fonts/fa/all.css" />
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="header">
+      <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <img src="/src/assets/images/logo.png" class="ez-logo" width="60" alt="ez-notes"> 
+          <a class="navbar-brand" href="#">ez-notes</a>
+        </div>
+      </nav>
+    </div>
+    <div class="container">
+      <div class="row" id="note-list">
+
+      </div>
+      <div class="floating-icon" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        <i class=" fa-solid fa-pen-to-square"></i>
+      </div>
+      <!-- Modal -->
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel" contenteditable>Title</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <div class="form-control" id="note-area" style="height: 350px" contenteditable></textarea>
+                <label for="note-area">Start Typing</label>
+              </div>
+              <div class="modal-footer">
+                <button type="button" id="save-note" class="btn btn-primary">Save changes</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="deleteNoteModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-body text-danger">
+              <h4>Do you want to delete this note?</h3>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button" id="confirm-delete" class="btn btn-primary">Delete</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="src/assets/js/jquery.js"></script>
+    <script src="src/assets/js/bootstrap.min.js"></script>
+    <script src="src/assets/fonts/fa/all.js"></script>
+    <script src="src/assets/js/popup.js"></script>
+    <script src="background.js"></script>
+</body>
+
+</html>

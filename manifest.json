@@ -1,0 +1,17 @@
+{
+  "name": "ez-note",
+  "description": "Write Simple TODO's for yourself",
+  "version": "1.0",
+  "manifest_version": 3,
+  "background": {
+    "service_worker": "background.js"
+  },
+  "icons": {
+    "16": "16.png",
+    "32": "32.png"
+  },
+  "permissions": ["storage"],
+  "action": {
+    "default_popup": "popup.html"
+  }
+}

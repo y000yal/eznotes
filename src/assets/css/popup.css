@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Flamenco&family=Montserrat:wght@400&display=swap');
+html,
+body {
+  font-family: 'Montserrat', sans-serif!important;
+  font-size: 14px;
+}
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: gray;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #b30000;
+}
+.wrapper {
+  width: 400px;
+  height: 500px;
+  overflow: inherit;
+}
+.container {
+  margin-top: 5.25rem !important;
+}
+.floating-icon {
+  position: fixed;
+  bottom: 25px;
+  right: 35px;
+  font-size: x-large;
+  cursor: pointer;
+  transform: scale(1);
+  transition: transform 0.1s ease-in-out, opacity 0.1s linear, right 0.1s linear,
+    bottom 0.1s linear;
+  z-index: 4;
+  background: white;
+  height: 40px;
+  width: 40px;
+  border-radius: 50px;
+  text-align: center;
+  box-shadow: 1px 1px 20px 0px #00000026;
+  opacity: 0.3;
+}
+.floating-icon:hover {
+  transform: scale(1.5);
+  opacity: 1;
+  right: 35px;
+  bottom: 30px;
+  color: #31cae3;
+}
+.modal-open {
+  overflow: inherit !important;
+}
+.modal-title {
+  width: 80%;
+  overflow: hidden;
+}
+.accordion-button {
+  width: 80%;
+  overflow-wrap: anywhere;
+}
+.accordion-button h4 {
+  width: 90%;
+  padding: 0.6rem 0.75rem !important;
+}
+.accordion-body {
+  overflow-wrap: anywhere;
+  min-height: 100px;
+  max-height: 350px;
+  overflow: auto;
+}
+.accordion-body:focus-visible {
+ outline-width: 0 !important;
+}
+.col-12 {
+  margin: 10px 0 10px 0;
+}
+/* modal slide left animation */
+.modal.fade {
+  left: -410px;
+  top: 0px;
+  transition: 0.2s ease-out;
+}
+.fade.show {
+  left: 0;
+  top: 0;
+}
+.modal.fade .modal-dialog {
+  transform: translate(0, 0) !important;
+}
