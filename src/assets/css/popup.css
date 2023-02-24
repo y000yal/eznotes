@@ -79,6 +79,9 @@ body {
   max-height: 350px;
   overflow: auto;
 }
+.accordion-header h6 {
+  font-weight: bold!important;
+}
 .accordion-body:focus-visible {
  outline-width: 0 !important;
 }
@@ -97,4 +100,21 @@ body {
 }
 .modal.fade .modal-dialog {
   transform: translate(0, 0) !important;
+}
+.navbar-brand::after {
+  content: "";
+  width: 2px;
+  height: 15px;
+  background-color: #000000;
+  display: inline-block;
+  position: absolute;
+  top: 36%;
+  text-align: center;
+  margin-left: 2px;
+  animation: blink 1s steps(2) infinite;
+}
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
 }

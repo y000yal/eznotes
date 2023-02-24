@@ -1,4 +1,5 @@
 $(document).ready(function () {
+
   function getNotes() {
     chrome.storage.local.get(["notes"], function (result) {
       if (result.notes) {
@@ -82,7 +83,7 @@ $(document).ready(function () {
     };
     chrome.storage.local.get(["notes"], function (result) {
       const allNotes = result.notes;
-      if (allNotes.length > 0) {
+      if (allNotes?.length > 0) {
         let latestNote = allNotes.reverse()[0];
         newNote.id = latestNote.id + 1;
         console.log("new note", newNote);
@@ -90,7 +91,7 @@ $(document).ready(function () {
       }
 
       chrome.storage.local.set({
-        notes: allNotes.length > 0 ? allNotes : [newNote],
+        notes: allNotes?.length > 0 ? allNotes : [newNote],
       });
       var listContainer = $("#note-list");
       $(listContainer).empty();
@@ -139,4 +140,5 @@ $(document).ready(function () {
         .text(val + " ");
     }
   });
+  $('textarea#tiny').tinymce({ height: 500, /* other settings... */ });
 });
