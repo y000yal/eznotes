@@ -140,5 +140,4 @@ $(document).ready(function () {
         .text(val + " ");
     }
   });
-  $('textarea#tiny').tinymce({ height: 500, /* other settings... */ });
 });
