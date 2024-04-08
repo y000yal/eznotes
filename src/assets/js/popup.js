@@ -90,7 +90,7 @@ $(document).ready(function () {
       }
 
       chrome.storage.local.set({
-        notes: allNotes.length > 0 ? allNotes : [newNote],
+        notes: allNotes?.length > 0 ? allNotes : [newNote],
       });
       var listContainer = $("#note-list");
       $(listContainer).empty();
