@@ -82,7 +82,7 @@ $(document).ready(function () {
     };
     chrome.storage.local.get(["notes"], function (result) {
       const allNotes = result.notes;
-      if (allNotes.length > 0) {
+      if (allNotes?.length > 0) {
         let latestNote = allNotes.reverse()[0];
         newNote.id = latestNote.id + 1;
         console.log("new note", newNote);
